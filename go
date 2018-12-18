@@ -1,1 +1,1 @@
-mvn clean spring-boot:run -Dspring.profiles.active=local
+mvn clean spring-boot:run

@@ -1,4 +1,4 @@
-package com.marcuseisele.example.twolayercache.clevercache;
+package com.marcuseisele.example.twolayercache.aop;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,10 +7,9 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface CleverCache {
+public @interface TwoLayerRedisCacheable {
 
-    long ttl() default 10L;
-    long graceTtl() default 60L;
-    String redisTemplate();
+    long firstLayerTtl() default 10L;
+    long secondLayerTtl() default 60L;
     String key();
 }

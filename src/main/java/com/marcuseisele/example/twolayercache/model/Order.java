@@ -9,8 +9,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class Order implements Serializable {
 
-    private static final long serialVersionUID = 123L;
-
+    private static final long serialVersionUID = -3281088656501163895L;
     private int id;
 
     private long orderNumber;
